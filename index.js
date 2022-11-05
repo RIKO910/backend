@@ -1,4 +1,9 @@
 const express = require('express');
+//heroku
+// const http =require("http");
+// const fs =require("fs");
+
+
 const cors = require('cors');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const app = express();
@@ -45,8 +50,14 @@ async function run() {
 }
 run().catch(console.dir);
 
+//heroku
+// const server= http.createServer((req,res)=>{
+//     res.end("welcome to server");
+// })
 
-
+// server.listen(port, ()=>{
+//     console.log(`server is running`)
+// })
 
 app.get('/', (req, res) => {
     res.send('Running My Node CRUD Server');
